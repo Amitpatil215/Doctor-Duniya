@@ -7,7 +7,6 @@ class PrescriptionBookAgainButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Spacer(),
         OutlineButton.icon(
           onPressed: () {
             Navigator.of(context).pushNamed(PrescribeMedicineButton.routName);
@@ -21,7 +20,7 @@ class PrescriptionBookAgainButton extends StatelessWidget {
         OutlineButton.icon(
           onPressed: () {},
           icon: Icon(FlutterIcons.shield_outline_mco),
-          label: Text("Book Again"),
+          label: Text("Book \nAgain"),
         )
       ],
     );

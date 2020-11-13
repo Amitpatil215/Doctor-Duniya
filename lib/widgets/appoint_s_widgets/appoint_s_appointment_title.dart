@@ -8,7 +8,8 @@ class ASAppointmentTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       child: Container(
-        margin: EdgeInsets.symmetric(vertical: 10.h, horizontal: 10.w),
+        height: 180.h,
+        margin: EdgeInsets.only(top: 10.h, left: 10.w, right: 10.w),
         child: Row(
           children: [
             Column(
@@ -22,100 +23,106 @@ class ASAppointmentTile extends StatelessWidget {
                 ),
               ],
             ),
-            Column(
-              children: [
-                Container(
-                  height: 150.h,
-                  width: 0.74.wp,
-                  margin: EdgeInsets.only(left: 30.w),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(30),
-                  ),
-                  child: Column(
-                    children: [
-                      Row(
-                        children: [
-                          Column(
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.only(
-                                  top: 8.0.h,
-                                  left: 9.w,
-                                ),
-                                child: Text(
-                                  "7:30 PM",
-                                  style: TextStyle(
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.blue,
-                                  ),
-                                ),
-                              ),
-                              Text(
-                                "2 h 30 min",
-                                style: TextStyle(
-                                  fontSize: 14,
-                                ),
-                              ),
-                            ],
+            Expanded(
+              child: Column(
+                children: [
+                  Container(
+                    height: 175.h,
+                    width: 0.74.wp,
+                    margin: EdgeInsets.only(left: 15.w),
+                    padding: EdgeInsets.all(6),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(30),
+                    ),
+                    child: Column(
+                      children: [
+                        Text(
+                          "Meeting with Dr. Duva abcde",
+                          overflow: TextOverflow.clip,
+                          maxLines: 1,
+                          softWrap: false,
+                          style: TextStyle(
+                            fontSize: 18,
                           ),
-                          SizedBox(
-                            width: 15,
-                          ),
-                          Column(
-                            children: [
-                              Container(
-                                width: 190.w,
-                                child: Text(
-                                  "Meeting with Dr. Duva mmmmmmmmm",
-                                  overflow: TextOverflow.clip,
-                                  maxLines: 1,
-                                  softWrap: false,
-                                  style: TextStyle(
-                                    fontSize: 18,
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Row(
+                          children: [
+                            Column(
+                              children: [
+                                Padding(
+                                  padding: EdgeInsets.only(
+                                    top: 8.0.h,
+                                    left: 9.w,
                                   ),
-                                ),
-                              ),
-                              Container(
-                                width: 190.w,
-                                child: Row(
-                                  children: [
-                                    Icon(Icons.location_on),
-                                    Expanded(
-                                      child: Text(
-                                        "Indira gandhi international airport",
-                                        overflow: TextOverflow.ellipsis,
-                                      ),
+                                  child: Text(
+                                    "7:30 PM",
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.blue,
                                     ),
-                                  ],
+                                  ),
                                 ),
-                              ),
-                              Container(
-                                // margin: EdgeInsets.only(top: 5),
-                                width: 190.w,
-                                child: Row(
-                                  children: [
-                                    Icon(Icons.phone),
-                                    Expanded(
-                                      child: Text(
-                                        "Telecomunication mmmmmmmmmmmmmmmmmmmmmmm",
-                                        overflow: TextOverflow.ellipsis,
+                                Text(
+                                  "2 h 30 min",
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                              width: 8,
+                            ),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Container(
+                                  width: 160.w,
+                                  child: Row(
+                                    children: [
+                                      Icon(Icons.location_on),
+                                      Expanded(
+                                        child: Text(
+                                          "Indira gandhi international airport",
+                                          overflow: TextOverflow.ellipsis,
+                                          maxLines: 3,
+                                        ),
                                       ),
-                                    )
-                                  ],
+                                    ],
+                                  ),
                                 ),
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                      Spacer(),
-                      PrescriptionBookAgainButton(),
-                    ],
+                                Container(
+                                  // margin: EdgeInsets.only(top: 5),
+                                  width: 160.w,
+                                  child: Row(
+                                    children: [
+                                      Icon(Icons.phone),
+                                      Expanded(
+                                        child: Text(
+                                          "Telecomunication mmmmmmmmmmmmmmmmmmmmmmm",
+                                          overflow: TextOverflow.ellipsis,
+                                          maxLines: 3,
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                        Spacer(),
+                        PrescriptionBookAgainButton(),
+                      ],
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ],
         ),
